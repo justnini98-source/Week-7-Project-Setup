@@ -116,21 +116,23 @@ h1.playfair-display-<uniquifier > {
 }
 
 .current-temperature-icon {
-  position: relative;
-  top: -2px;
+  /* position: relative;
+  top: -2px; */
   font-size: 40px;
-  margin-right: 10px;
+  margin-top: 22px;
 }
 
 .current-temperature- value {
   font-size: 80px;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .current-temperature-unit {
   font-size: 28px;
-  position: relative;
-  top: -15px;
+  /* position: relative;
+  top: -15px; */
+  margin-top: 16px;
 }
 
 .search-input {

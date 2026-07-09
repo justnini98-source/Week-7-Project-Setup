@@ -123,9 +123,10 @@ h1.playfair-display-<uniquifier > {
 }
 
 .current-temperature- value {
+
   font-size: 80px;
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 20px 0 0 10px;
 }
 
 .current-temperature-unit {

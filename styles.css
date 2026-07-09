@@ -106,7 +106,8 @@ h1.playfair-display-<uniquifier > {
   justify-content: space-between;
 }
 
-.current-temperature {
+.current-temperature-container {
+  display:flex;
   font-size: 48px;
   font-weight: 600;
   color: #8b735b;

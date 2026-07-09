@@ -119,7 +119,7 @@ h1.playfair-display-<uniquifier > {
   /* position: relative;
   top: -2px; */
   font-size: 40px;
-  margin-top: 22px;
+  margin-top: 20px;
 }
 
 .current-temperature- value {
@@ -132,7 +132,7 @@ h1.playfair-display-<uniquifier > {
   font-size: 28px;
   /* position: relative;
   top: -15px; */
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .search-input {

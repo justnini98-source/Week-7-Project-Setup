@@ -73,15 +73,20 @@ console.log(dayNames[dayToday]);
 
 function enterCity(event) {
   event.preventDefault();
-
-  let cityInput = document.querySelector("#city-given").value.trim();
-  let h1 = document.querySelector("#search-request-city");
-  h1.innerHTML = cityInput;
-
   let apiKey = "8f60tcc18bc942bocf922c235cb83f4a";
-  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${cityInput}&key=${apiKey}`;
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
   axios.get(apiURL).then(displayWeather);
+}
+
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#city-given");
+  let cityElement = document.querySelector("#city").value.trim();
+  cityElement.innerHTML = response.city.data;
+
+  enterCity(searchInput.value);
+
 }
 
 function displayWeather(response) {

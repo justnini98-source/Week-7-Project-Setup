@@ -72,21 +72,15 @@ console.log(dayNames[dayToday]);
 // #feature 3: check for the actual temperature and replace placeholder
 
 function enterCity(city) {
-  event.preventDefault();
   let apiKey = "8f60tcc18bc942bocf922c235cb83f4a";
   let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-
   axios.get(apiURL).then(displayWeather);
 }
 
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-given");
-  let cityElement = document.querySelector("#city").value.trim();
-  cityElement.innerHTML = response.city.data;
-
-  enterCity(searchInput.value);
-
+  enterCity(searchInput.value.trim());
 }
 
 function displayWeather(response) {
@@ -96,6 +90,6 @@ function displayWeather(response) {
 }
 
 let searchfield = document.querySelector("#user-search-request");
-searchfield.addEventListener("submit", enterCity);
+searchfield.addEventListener("submit", handleSearchSubmit);
 
 enterCity("Paris");

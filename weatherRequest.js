@@ -71,7 +71,7 @@ console.log(dayNames[dayToday]);
 
 // #feature 3: check for the actual temperature and replace placeholder
 
-function enterCity(event) {
+function enterCity(city) {
   event.preventDefault();
   let apiKey = "8f60tcc18bc942bocf922c235cb83f4a";
   let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;

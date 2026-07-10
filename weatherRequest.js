@@ -98,3 +98,4 @@ function displayWeather(response) {
 let searchfield = document.querySelector("#user-search-request");
 searchfield.addEventListener("submit", enterCity);
 
+enterCity("Paris");

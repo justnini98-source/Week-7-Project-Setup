@@ -46,8 +46,8 @@ function checkCity(event) {
 }
 // fct removed for week 4 homework
 
-// #feature 1: TIME
-let now = new Date();
+// #feature 1: TIME (moved)
+/*let now = new Date();
 let dayNames = [
   "Sunday",
   "Monday",
@@ -65,7 +65,7 @@ const timeNow = now.toLocaleTimeString("en-GB", {
 });
 dayDisplay.innerHTML = dayNames[dayToday] + ` ` + timeNow;
 console.log(timeNow);
-console.log(dayNames[dayToday]);
+console.log(dayNames[dayToday]); */ 
 
 // #feature 2: Search engine
 
@@ -87,9 +87,13 @@ function displayWeather(response) {
   let temperatureCurrent = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector("#current-temperature-value");
   let cityElement = document.querySelector("#city");
-let descriptionElement = document.querySelector("#description");
-let humidityElement = document.querySelector("#humidity-value");
-let speedElement= document.querySelector("#speed-value");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity-value");
+  let speedElement= document.querySelector("#speed-value");
+  let timeDisplay = document.querySelector("#currentTime");
+  let date = new Date(response.data.time * 1000);
+
+
 
 console.log(response.data);
 
@@ -98,6 +102,28 @@ console.log(response.data);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
   speedElement.innerHTML = `${response.data.wind.speed} km/h`;
+  timeDisplay.innerHTML = formatDate(date);
+}
+
+function formatDate (date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
 }
 
 let searchfield = document.querySelector("#user-search-request");

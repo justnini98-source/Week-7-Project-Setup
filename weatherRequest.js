@@ -88,10 +88,14 @@ function displayWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature-value");
   let cityElement = document.querySelector("#city");
 let descriptionElement = document.querySelector("#description");
+let humidityElement = document.querySelector("#humidity-value");
+
+console.log(response.data);
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperatureCurrent;
   descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 }
 
 let searchfield = document.querySelector("#user-search-request");

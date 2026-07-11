@@ -87,6 +87,9 @@ function displayWeather(response) {
   let temperatureCurrent = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector("#current-temperature-value");
   temperatureElement.innerHTML = temperatureCurrent;
+
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.city;
 }
 
 let searchfield = document.querySelector("#user-search-request");

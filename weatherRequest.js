@@ -92,6 +92,7 @@ function displayWeather(response) {
   let speedElement= document.querySelector("#speed-value");
   let timeDisplay = document.querySelector("#currentTime");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
 
 
@@ -99,6 +100,7 @@ console.log(response.data);
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperatureCurrent;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
   speedElement.innerHTML = `${response.data.wind.speed} km/h`;

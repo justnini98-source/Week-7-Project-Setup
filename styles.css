@@ -107,7 +107,8 @@ h1.playfair-display-<uniquifier > {
 }
 
 .current-temperature-container {
-  font-size: 48px;
+  display: flex;
+  align-items: center;
   font-weight: 600;
   color: #8b735b;
   font-family: playfair-display, serif;
@@ -115,25 +116,24 @@ h1.playfair-display-<uniquifier > {
 }
 
 .current-temperature-icon {
-  position: relative;
-  top: -2px;
+  
   font-size: 40px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
-.current-temperature- value {
-
-  font-size: 80px;
-  font-weight: bold;
-  margin: 20px 0 0 10px;
+.current-temperature-value {
+  
+  font-size: 40px;
+  margin-top:15px;
 }
 
 .current-temperature-unit {
   font-size: 28px;
-  position: relative;
-  top: -15px;
-  margin-top: 20px;
-}
+  margin-top: 10px;
+  padding: 10px;
+} 
+
+
 
 .search-input {
   background-color: #faf7f2;

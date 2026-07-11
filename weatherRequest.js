@@ -89,13 +89,15 @@ function displayWeather(response) {
   let cityElement = document.querySelector("#city");
 let descriptionElement = document.querySelector("#description");
 let humidityElement = document.querySelector("#humidity-value");
+let speedElement= document.querySelector("#speed-value");
 
 console.log(response.data);
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperatureCurrent;
   descriptionElement.innerHTML = response.data.condition.description;
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
+  speedElement.innerHTML = `${response.data.wind.speed} km/h`;
 }
 
 let searchfield = document.querySelector("#user-search-request");

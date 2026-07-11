@@ -27,7 +27,7 @@ console.log(response.data);
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperatureCurrent;
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
   speedElement.innerHTML = `${response.data.wind.speed} km/h`;

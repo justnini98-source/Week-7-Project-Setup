@@ -116,13 +116,14 @@ h1.playfair-display-<uniquifier > {
 }
 
 .current-temperature-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin-top: 10px;
 }
 
 .current-temperature-value {
   font-size: 40px;
+  font-weight: 900;
   margin-top:10px;
 }
 
